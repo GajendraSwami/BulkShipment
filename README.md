@@ -21,4 +21,4 @@ Follow the Advance Customization section for more details.
 
  Create Shipping Label Log field on Account object to show success or error message.
 
- Here is the Link for documentation: https://docs.google.com/document/d/1fsUdTSwz0ZCq3P8fVyUzqVcquhoW9JGXNYfrArMU-EE/edit
+ Here is the Link for detailed documentation: https://docs.google.com/document/d/1fsUdTSwz0ZCq3P8fVyUzqVcquhoW9JGXNYfrArMU-EE/edit
