@@ -17,8 +17,6 @@ BulkShipmentCreation.cls :-  In this Apex controller you can change names accord
 
 BulkShipmentBatch.cls:-  In this Batch class you can change the hardcoded things like shipping carrier, weight unit, linear unit, label type, dropoffType etc. according to your specific needs.
 
-Follow the Advance Customization section for more details.
-
  Create Shipping Label Log field on Account object to show success or error message.
 
  Here is the Link for detailed documentation: https://docs.google.com/document/d/1fsUdTSwz0ZCq3P8fVyUzqVcquhoW9JGXNYfrArMU-EE/edit
