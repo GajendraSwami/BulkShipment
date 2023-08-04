@@ -1,18 +1,24 @@
-# Salesforce DX Project: Next Steps
+How to implement bulk shipment
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+Bulk shipment will let you create shipments from any objects list view. You need to call Asotnous shipping app global methods and write your decorator to call Astonous global methods. Here are steps outlined for self developing this feature and as an alternative you can always ask our support to implement it for you.
 
-## How Do You Plan to Deploy Your Changes?
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+Step1: Copy code from below Repository. 
 
-## Configure Your Salesforce DX Project
+Repo has the following 3 resources that will be adjusted according to your  
+           specific needs. Those classes are made for adding Bulk Shipment on Standard 
+           Account Object.
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+ GitHub: https://github.com/GajendraSwami/BulkShipment
 
-## Read All About It
+BulkShipmentCreationPage.page :- This is a VF page where you can customize Service name, carrier name, packaging type, total weight and ship date etc.
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+BulkShipmentCreation.cls :-  In this Apex controller you can change names according to  your object and its fields. Also you can change the hardcoded things like Service type, Packaging type, Shipping Carrier etc.
+
+BulkShipmentBatch.cls:-  In this Batch class you can change the hardcoded things like shipping carrier, weight unit, linear unit, label type, dropoffType etc. according to your specific needs.
+
+Follow the Advance Customization section for more details.
+
+ Create Shipping Label Log field on Account object to show success or error message.
+
+ Here is the Link for documentation: https://docs.google.com/document/d/1fsUdTSwz0ZCq3P8fVyUzqVcquhoW9JGXNYfrArMU-EE/edit
