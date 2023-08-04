@@ -1,0 +1,28 @@
+<apex:page standardController="Account" recordSetVar="Acc" extensions="BulkShipmentCreation">
+    <apex:form > 
+        <apex:pageMessages escape="false"/> 
+        <apex:pageBlock title="Shipment Details" rendered="{!NOT(shipmentCreated)}">
+             <apex:pageBlockSection title="Shipping Infomration">
+                <apex:inputField value="{!shipment.Astonous_SM__Shipping_Career__c}" required="true"/>
+                <apex:inputField value="{!shipment.Astonous_SM__Shipment_Packaging_Type__c}" required="true"/>
+                <apex:inputField value="{!shipment.Astonous_SM__Shipment_Service_Type__c}" required="true"/>
+                <apex:inputField value="{!shipment.Astonous_SM__Ship_Date__c}" required="true"/> 
+                 <apex:pageBlockSectionItem >
+                     <apex:outputLabel >Total Weight</apex:outputLabel>
+                     <apex:outputPanel >
+                         <div class="requiredInput">
+                             <div class="requiredBlock"></div>
+                             <apex:inputText value="{!totalWeight}" required="true" label="weight"/> 
+                         </div>
+                      </apex:outputPanel>
+                 </apex:pageBlockSectionItem>
+              </apex:pageBlockSection>
+
+            <apex:pageBlockButtons >
+                 <apex:commandButton value="Create Shipments" action="{!createShipments}" onClick="lockScreen(true);"/>
+                <apex:commandButton value="Go Back" action="{!cancel}"/>
+          </apex:pageBlockButtons>
+        </apex:pageBlock>
+        <apex:commandButton value="Go Back" action="{!cancel}" rendered="{!shipmentCreated}"/>
+    </apex:form>
+</apex:page>
